@@ -1,0 +1,17 @@
+<div *ngIf="pokemon">
+ 
+  <h2>{{ pokemon.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{pokemon.id}}</div>
+  <div><span>expirience: </span>{{pokemon.base_experience}}</div>
+  <div><span>height: </span>{{pokemon.height}}</div>
+  <div><span>weight: </span>{{pokemon.weight}}</div>
+
+  <div>
+    <label>Change name:
+      <input [(ngModel)]="pokemon.name" placeholder="name">
+    </label>
+  </div>
+ 
+</div>
+<button (click)="goBack()">go back</button>
+

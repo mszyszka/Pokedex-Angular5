@@ -1,0 +1,15 @@
+<h2>My Pokemons</h2>
+
+<ul class="pokemons">
+    <li *ngFor="let pokemon of pokemons">
+      <a routerLink="/detail/{{pokemon.id}}">
+        <span class="badge">{{pokemon.id}}</span> {{pokemon.name}}
+      </a>
+    </li>
+  </ul>
+
+<app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
+ 
+
+
+
